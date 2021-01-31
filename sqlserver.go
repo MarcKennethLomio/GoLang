@@ -7,7 +7,7 @@ Readme:
 * Enable TCP/IP
 * Restart SQL Server (MSSQLSERVER)
 
-*/ 
+*/
 package main;
 
 import(
@@ -40,4 +40,8 @@ connectionString := "sqlserver://:@127.0.0.1:1433?database=GoLangDB"
 	   // Migrate the schema
 	   db.Migrator().CreateTable(&User{})
 }
+// References for possible errors:
+// https://github.com/denisenkom/go-mssqldb/issues/105
+// https://stackoverflow.com/questions/32010749/go-with-sql-server-driver-is-unable-to-connect-successfully-login-fail/39008249
+// https://stackoverflow.com/questions/47617509/unable-to-connect-to-ms-sql
 
